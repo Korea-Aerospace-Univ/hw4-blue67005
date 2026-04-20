@@ -24,19 +24,19 @@ int main(void)
         {
             // 입력값이 정답보다 크면 '>' 출력 :
             // 사용자가 입력한 값이 더 크다는 의미
-            printf("%d > ?\n", input);
+            printf("%d>?\n", input);
         }
         else if (input < answer)
         {
             // 입력값이 정답보다 작으면 '<' 출력 :
             // 사용자가 입력한 값이 더 작다는 의미
-            printf("%d < ?\n", input);
+            printf("%d<?\n", input);
         }
         else
         {
             // 입력값이 정답과 같으면 '==' 출력 :
             // 정답을 맞췄다는 의미
-            printf("%d == ?\n", input);
+            printf("%d==?\n", input);
         }
 
         // 반복 조건 설명
