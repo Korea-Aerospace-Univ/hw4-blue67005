@@ -49,7 +49,7 @@ int main(void)
 
     // 반복이 끝난 후 총 시도 횟수 출력
     // 문제에서 "시도횟수는 n회" 형식을 요구하므로 그대로 출력
-    printf("%d -> 시도횟수는 %d회\n", count, count);
+    printf("%d → 시도횟수는 %d회\n", count, count);
 
     return 0;
 }
