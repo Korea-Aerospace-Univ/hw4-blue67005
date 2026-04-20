@@ -1,30 +1,38 @@
 #include <stdio.h>
 
-int main(void)
-{
-    int answer;  // 정답을 저장하는 변수 (기준값 역할)
-    int input;   // 사용자가 계속 입력하는 값을 저장하는 변수
+int main(void) {
+    int answer;       // 정답을 저장할 변수
+    int guess;        // 사용자가 입력하는 추측값을 저장할 변수
+    int count = 0;    // 시도 횟수를 저장할 변수
 
-    scanf("%d", &answer);  // 정답을 먼저 입력받는 이유: 이후 입력되는 값들과 비교해야 하므로 '기준값'이 먼저 필요함
+    // 첫 번째 입력은 '정답'으로 설정
+    scanf("%d", &answer);
 
-    do
-    {
-        scanf("%d", &input);              // 사용자로부터 값을 입력받음
+    // do ~ while문을 사용하여 최소 한 번은 실행되도록 함 
+    // 사용자가 정답을 맞출 때까지 반복해야 하므로 사용 
+    do {
+        scanf("%d", &guess); // 사용자의 추측값 입력
+        count++;             // 입력할 때마다 시도 횟수 1 증가
 
-        if (input > answer)               // 입력값과 정답을 비교하는 이유 : 사용자가 입력한 값이 정답보다 큰지, 작은지, 같은지를 판단해야 문제에서 요구한 대소 관계를 출력할 수 있음
-        {
-            printf("%d>?\n", input);      // 입력값이 정답보다 크면 '>' 출력 : 사용자가 입력한 값이 더 크다는 의미
+        if (guess > answer) {
+            // 입력값이 정답보다 클 경우
+            printf("%d>?\n", guess);
+        } 
+        else if (guess < answer) {
+            // 입력값이 정답보다 작을 경우
+            printf("%d<?\n", guess);
+        } 
+        else {
+            // 정답을 맞춘 경우 (guess == answer)
+            printf("%d==?\n", guess);
         }
-        else if (input < answer)          // 입력값이 정답보다 작으면 '<' 출력 : 사용자가 입력한 값이 더 작다는 의미
-        {
-            printf("%d<?\n", input);      // 입력값이 정답과 같으면 '==' 출력 : 정답을 맞췄다는 의미
-        }
-        else
-        {
-            printf("%d==?\n", input);     // 정답도 출력 + 개행
-        }
- 
-    } while (input != answer);            // 반복 조건 설명 input이 answer와 같아지면 (정답을 맞추면) 반복 종료 같지 않으면 계속 반복해서 입력을 받음
 
-    return 0;                             // 프로그램 정상 종료
+    } while (guess != answer); 
+    // 조건식: 입력값과 정답이 같지 않은 동안 계속 반복합니다. 
+    // 같아지는 순간 종료 
+
+    // 루프 탈출 후 최종 시도 횟수 출력 (예시 형식 준수)
+    printf("시도횟수는 %d회\n", count);
+
+    return 0;
 }
