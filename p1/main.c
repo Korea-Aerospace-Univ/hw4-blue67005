@@ -32,7 +32,7 @@ int main(void) {
     // 같아지는 순간 종료 
 
     // 루프 탈출 후 최종 시도 횟수 출력 (예시 형식 준수)
-    printf("시도횟수는 %d회\n", count);
+    printf("시도횟수는 %d회", count);
 
     return 0;
 }
