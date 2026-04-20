@@ -14,7 +14,7 @@ int main(void)
     {
         scanf("%d", &input);  // 사용자 입력 받기
          // 사용자가 정답을 맞출 때까지 계속 시도해야 하기 때문에 반복마다 새로운 값을 입력받음
-       count++;              // 총 시도 횟수를 출력해야 하므로 입력할 때마다 증가시킴
+        count++;              // 총 시도 횟수를 출력해야 하므로 입력할 때마다 증가시킴
 
         // 입력값과 정답을 비교하여 크기 관계 출력
         if(input > answer)
@@ -27,9 +27,9 @@ int main(void)
              // 입력값과 정답의 대소 관계에 따라 서로 다른 결과를 출력해야 하기 때문
 
         if(input > answer)
-            printf("%d 보다 낮습니다\n", input);
+            printf("%d보다 낮습니다\n", input);   //  띄어쓰기 제거
         else if(input < answer)
-            printf("%d 보다 높습니다\n", input);
+            printf("%d보다 높습니다\n", input);   //  띄어쓰기 제거
         else
             printf("%d 정답입니다\n", input);
          // 두 번째 if문을 따로 사용하는 이유:
@@ -39,7 +39,7 @@ int main(void)
 
     printf("%d 시도횟수는 %d회\n", answer, count);
     // 반복 종료 후 총 시도 횟수 출력
-     // 정답을 맞춘 뒤에만 총 시도 횟수를 알 수 있기 때문에 반복이 끝난 후 결과를 출력
+    // 정답을 맞춘 뒤에만 총 시도 횟수를 알 수 있기 때문에 반복이 끝난 후 결과를 출력
 
     return 0;
 }
