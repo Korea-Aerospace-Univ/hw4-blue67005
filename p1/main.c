@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void)
-{
+{   
     int answer;   // 정답 저장 변수
     int input;    // 사용자가 입력하는 값
     int count=0;  // 시도 횟수 저장
